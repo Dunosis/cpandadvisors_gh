@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="CP & A is an accounting firm in St. Louis specializing in personalized tax and accounting services for the Latino community. Helping businesses and individuals manage their finances with confidence.">
+    <meta name="keywords" content="CP & A, accounting, tax, Latino, St. Louis, Missouri">
+    <title>CP & Advisors - Services</title>
+
+    <link rel="shortcut icon" href="assets/logos/cpanda-full.ico" type="image/png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="CP & Advisors Project" />
+    <meta property="og:description"
+        content="CP & A is an accounting firm in St. Louis specializing in personalized tax and accounting services for the Latino community. Helping businesses and individuals manage their finances with confidence." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="assets/images/home/hiking4.jpg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:title" content="CP & Advisors Project">
+    <meta name="twitter:description"
+        content="CP & A is an accounting firm in St. Louis specializing in personalized tax and accounting services for the Latino community. Helping businesses and individuals manage their finances with confidence.">
+    <meta name="twitter:image" content="assets/images/home/hiking4.jpg">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+        integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={% settings_value " ANALYTICS_TAG_ID" %}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', '{% settings_value "ANALYTICS_TAG_ID" %}');
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body class="tw-min-h-[100vh] tw-w-full tw-bg-[#ffffff] tw-flex tw-flex-col">
+
+    <div id="toast"
+        class="tw-p-2 tw-px-4 tw-bg-black tw-h-max tw-z-[5000] tw-fixed tw-top-[5%] tw-left-[50%] tw-translate-x-[-50%]  tw-place-items-center tw-hidden tw-rounded-md tw-border-0 tw-text-white"
+        role="alert">
+        <div class="tw-flex tw-gap-1">
+            <div class="toast-body" id="toast-body">
+            </div>
+            <button type="button" class="bi bi-x tw-text-lg" aria-label="Close"></button>
+        </div>
+    </div>
+
+    <header
+        class="tw-flex tw-w-full tw-z-20 tw-h-[60px] lg:tw-justify-around tw-absolute tw-top-0 tw-px-[10%] max-lg:tw-mr-auto tw-text-black ">
+
+        <a class="tw-max-w-[150px] tw-h-[50px] tw-p-[4px]" href="/">
+            <img src="assets/logos/cp&a-logo.png" alt="logo" class="tw-w-full tw-h-full tw-object-contain">
+
+        </a>
+        <div class="collapsable-header animated-collapse max-lg:tw-shadow-md" id="collapsed-header-items">
+            <div
+                class="tw-w-max tw-text-base tw-flex tw-gap-5 tw-h-full lg:tw-mx-auto lg:tw-place-items-center max-lg:tw-place-items-end max-lg:tw-flex-col max-lg:tw-mt-[50px] max-lg:tw-gap-5 tw-text-black">
+
+                <a class="header-links" href="about.html">
+                    About
+                </a>
+                <a class="header-links" href="services.html">
+                    Services
+                </a>
+                <a class="header-links" href="blogs.html" rel="noreferrer">
+                    Blogs
+                </a>
+                <a class="header-links" href="contact-us.html" rel="noreferrer">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+        <button class="tw-absolute tw-text-black tw-z-50 tw-right-3 tw-top-3 tw-text-3xl  bi bi-list lg:tw-hidden"
+            onclick="toggleHeader()" aria-label="menu" id="collapse-btn">
+            <!-- <i class="bi bi-list"></i> -->
+        </button>
+    </header>
+
+    <div class="tw-w-full tw-h-full tw-mt-[50px]">
+
+
+        <section class="tw-w-full tw-min-h-[100vh]  tw-max-w-[100vw]
+        tw-flex tw-flex-col tw-overflow-hidden tw-relative" id="hero-section">
+
+            <div class="tw-w-full tw-h-full tw-p-[5%] tw-gap-10
+        tw-place-content-center tw-min-h-[100vh]
+        tw-justify-around tw-place-items-center
+        tw-flex max-lg:tw-flex-col">
+
+                <div class="tw-flex tw-flex-col tw-place-content-center tw-max-w-[650px] tw-min-w-[550px] 
+            max-md:tw-min-w-[300px]">
+                    <h1 class="tw-text-6xl tw-font-bold tw-uppercase 
+            tw-leading-normal max-md:tw-text-3xl max-md:tw-leading-relaxed tw-mb-[5%]">
+            Clear and Transparent Accounting Services
+                    </h1>
+                    <!-- Section Heading -->
+                    <h2 class="tw-text-center tw-text-3xl max-md:tw-text-2xl tw-mb-[5%]">
+                        We are a full-service accounting and tax firm. Learn more about our specific services below.
+                    </h2>
+
+                    <div
+                        class="tw-flex tw-flex-row max-md:tw-flex-col tw-place-content-around tw-gap-10 tw-justify-center tw-items-start tw-mt-5 tw-mb-[5%]">
+
+                        <!-- First Service Card -->
+                        <div class="tw-flex tw-items-start tw-gap-4 tw-w-[40%] max-md:tw-w-full">
+                            <div class="tw-flex-shrink-0">
+                                <div
+                                    class="tw-bg-black tw-w-[40px] tw-h-[40px] tw-rounded-[100%] tw-flex tw-justify-center tw-items-center">
+                                    <i class="bi bi-check-lg tw-text-4xl tw-text-white tw-px-[5%]"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="tw-text-2xl tw-font-semibold tw-mb-[2%]">For Individuals</h3>
+                                <p class="tw-text-xl tw-leading-relaxed">
+                                    We support you throughout the year with personalized accounting services, from tax reduction to filing tax returns.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Second Service Card -->
+                        <div class="tw-flex tw-items-start tw-gap-4 tw-w-[40%] max-md:tw-w-full">
+                            <div class="tw-flex-shrink-0">
+                                <div
+                                    class="tw-bg-black tw-w-[40px] tw-h-[40px] tw-rounded-[100%] tw-flex tw-justify-center tw-items-center">
+                                    <i class="bi bi-check-lg tw-text-4xl tw-text-white"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="tw-text-2xl tw-font-semibold tw-mb-[2%]">For Business</h3>
+                                <p class="tw-text-xl tw-leading-relaxed">
+                                    We manage the complete accounting of your business and offer outsourced services to ease your administrative burden.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <a href="contact-us.html" class="btn tw-mt-5 tw-mx-auto 
+                                tw-duration-[0.3s]
+                                tw-transition-transform
+                                hover:tw-translate-x-2
+                                tw-mb-[5%]
+                                ">
+                        <span>Contact us now</span>
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="tw-min-w-[450px]  
+            tw-place-content-center
+            tw-place-items-center
+            tw-rounded-3xl
+            ">
+                    <div class="tw-rounded-lg tw-overflow-hidden tw-shadow-xl hero-image">
+                        <img loading="lazy" src="assets/images/home/Claudia-Headshot-3.jpg" alt="dashboard"
+                            class="tw-w-full tw-h-full">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pricing-section">
+            <h2 class="section-title tw-text-5xl tw-font-bold">A Price for Every Size of Business</h2>
+            <h2 class="tw-text-left tw-text-3xl max-md:tw-text-2xl tw-mb-[5%]">
+                From entrepreneurs to established companies, we have a solution tailored to your needs.
+            </h2>
+
+            <div class="pricing-cards">
+
+                <!-- Pricing Card 1 -->
+                <div class="pricing-card">
+                    <div class="price-card-content">
+                        <h3 class="price-card-title">Entrepreneur</h3>
+                        <p class="card-period">starting from:</p>
+                        <p class="card-price">$300</p>
+                        <p class="card-period">per month</p>
+                        <p class="price-card-description tw-text-xl">
+                            Ideal for small businesses and entrepreneurs with low-level complexity and small business tax planning.
+                        </p>
+                        <ul class="card-features tw-text-lg tw-font-semibold">
+                            <li>✔ Preparation of the year-end tax return</li>
+                            <li>✔ Personalized tax planning</li>
+                            <li>✔ Additional accounting and payroll services</li>
+                        </ul>
+                        <p class="card-period">
+                            Packages vary depending on business income
+                        </p>
+                        <a href="contact-us.html" class="btn tw-mt-10 tw-mx-auto 
+                tw-duration-[0.3s]
+                tw-transition-transform
+                hover:tw-translate-x-2
+                ">
+                            <span>Contact us now</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Pricing Card 2 -->
+                <div class="pricing-card">
+                    <div class="price-card-content">
+                        <h3 class="price-card-title">Growing</h3>
+                        <p class="card-period">starting from:</p>
+                        <p class="card-price">$500</p>
+                        <p class="card-period">per month</p>
+                        <p class="price-card-description tw-text-xl">
+                            Ideal for small to medium-sized businesses with mid-level operations.
+                        </p>
+                        <ul class="card-features tw-text-lg tw-font-semibold">
+                            <li>✔ Everything included in the 'Entrepreneur' package</li>
+                            <li>✔ Customized accounting for complex needs</li>
+                            <li>✔ Streamlined payroll management</li>
+                            <li>✔ Proactive tax strategies</li>
+                        </ul>
+                        <p class="card-period">
+                            Packages vary depending on business income
+                        </p>
+                        <a href="contact-us.html" class="btn tw-mt-10 tw-mx-auto 
+                tw-duration-[0.3s]
+                tw-transition-transform
+                hover:tw-translate-x-2
+                ">
+                            <span>Contact us now</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Pricing Card 3 -->
+                <div class="pricing-card">
+                    <div class="price-card-content">
+                        <h3 class="price-card-title">Established</h3>
+                        <p class="card-period">Starting from:</p>
+                        <p class="card-price">$1000</p>
+                        <p class="card-period">Per month</p>
+                        <p class="price-card-description tw-text-xl">
+                            Ideal for large teams and established companies with high complexity and advanced tax needs.
+                        </p>
+                        <ul class="card-features tw-text-lg tw-font-semibold">
+                            <li>✔ Comprehensive accounting</li>
+                            <li>✔ Payroll management</li>
+                            <li>✔ Advanced tax planning</li>
+                        </ul>
+                        <p class="card-period">
+                            Packages vary depending on business income
+                        </p>
+                        <a href="contact-us.html" class="btn tw-mt-10 tw-mx-auto tw-duration-[0.3s] tw-transition-transform hover:tw-translate-x-2">
+                            <span>Contact us now</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <p class="section-footer tw-text-2xl">
+                Contact us to learn about our customized pricing, service-based rates, and hourly rates for your business needs.
+            </p>
+            <div class="additional-features tw-text-2xl tw-font-semibold max-md:tw-text-xl">
+                <ul class="card-features">
+                    <li>✔ We clean your company's books</li>
+                    <li>✔ We prepare perfect financial statements</li>
+                    <li>✔ We create tax reduction plans</li>
+                    <li>✔ Monthly bookkeeping and advice</li>
+                </ul>
+                <ul class="card-features">
+                    <li>✔ You pay taxes without surprises</li>
+                    <li>✔ Quarterly and monthly reports</li>
+                    <li>✔ Year-end reports</li>
+                    <li>✔ Business tax planning</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="accordion-section">
+            <h2 class="section-title tw-text-5xl tw-font-bold tw-mb-[5%]">Learn More About Our Accounting Services</h2>
+
+            <!-- Accordion Card 1 (Expanded by default) -->
+            <div class="accordion-card expanded" onclick="toggleAccordion(this)">
+                <div class="accordion-header">
+                    <h3 class="accordion-title tw-font-bold tw-text-3xl">Tax Services</h3>
+                    <div class="accordion-icon">
+                        <span class="toggle-icon tw-font-bold tw-text-4xl">▴</span>
+                    </div>
+                </div>
+                <div class="accordion-content">
+                    <p class="accordion-description tw-text-xl">
+                        <strong class="tw-text-2xl">Preparation of Individual and Business Taxes</strong>
+                        <br><br>
+                        This service guarantees comprehensive tax preparation for individuals and businesses.
+                        We focus on maximizing deductions and minimizing the tax burden, ensuring that each client complies with all tax regulations. Whether it's an individual or corporate return, we work to make the process easy and accurate.
+                        <br><br>
+                        <strong class="tw-text-2xl">Tax Planning Consulting</strong>
+                        <br><br>
+                        Personalized tax planning allows our clients to organize their finances
+                        with strategies that optimize their taxes and ensure compliance. We focus on
+                        developing tailored plans that align the client's financial goals with an
+                        efficient tax burden.
+                        <br><br>
+                        <strong class="tw-text-2xl">Assistance with IRS Audits and Disputes</strong>
+                        <br><br>
+                        In the event of an audit or dispute with the IRS, we represent our clients to protect their rights and resolve tax conflicts. Our team handles the communication and process so our clients can remain calm and feel supported.
+                    </p>
+                    <div class="accordion-image">
+                        <img loading="lazy" src="assets/images/home/Accounting-3.jpg" alt="Service Image">
+                        <div class="accordion-features">
+                            <strong class="tw-text-xl tw-font-bold">Service Features</strong>
+                            <div class="additional-features tw-text-lg">
+                                <ul>
+                                    <li>✔ We maximize deductions</li>
+                                    <li>✔ Tax compliance assured</li>
+                                    <li>✔ Personalized advice</li>
+                                </ul>
+                                <ul>
+                                    <li>✔ Precise and efficient results</li>
+                                    <li>✔ Strategic tax savings</li>
+                                    <li>✔ Total peace of mind regarding your taxes</li>
+                                </ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion Card 2 -->
+            <div class="accordion-card" onclick="toggleAccordion(this)">
+                <div class="accordion-header">
+                    <h3 class="accordion-title tw-font-bold tw-text-3xl">Accounting and Bookkeeping</h3>
+                    <div class="accordion-icon">
+                        <span class="toggle-icon tw-font-bold tw-text-4xl">▴</span>
+                    </div>
+                </div>
+                <div class="accordion-content">
+                    <p class="accordion-description tw-text-xl">
+                        <strong class="tw-text-2xl">Accounting and Bookkeeping</strong>
+                        <br><br>
+                        We offer a daily accounting service that keeps your company's financial records up-to-date and accurate.
+                        From transaction management to account tracking, we ensure our clients always have a clear view of their financial situation.
+                        <br><br>
+                        <strong class="tw-text-2xl">Regulatory Compliance Consulting</strong>
+                        <br><br>
+                        We guide companies to ensure they comply with all applicable tax, labor, and environmental laws, especially in highly regulated sectors.
+                        Our team reviews policies and procedures to minimize risks and avoid penalties.
+                    </p>
+                    <div class="accordion-image">
+                        <img loading="lazy" src="assets/images/home/Accounting-5.jpg" alt="Service Image">
+                        <div class="accordion-features">
+                            <strong class="tw-text-xl tw-font-bold">Features of the Service Offered</strong>
+                            <div class="additional-features tw-text-lg">
+                                <ul>
+                                    <li>✔ Records always up to date</li>
+                                    <li>✔ Detailed financial analysis</li>
+                                    <li>✔ Risk-free compliance</li>
+                                </ul>
+                                <ul>
+                                    <li>✔ Advice to optimize finances</li>
+                                    <li>✔ Clear and ready reports</li>
+                                    <li>✔ Proactive savings and efficiency</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion Card 3 -->
+            <div class="accordion-card" onclick="toggleAccordion(this)">
+                <div class="accordion-header">
+                    <h3 class="accordion-title tw-font-bold tw-text-3xl">Business Consulting and Compliance</h3>
+                    <div class="accordion-icon">
+                        <span class="toggle-icon tw-font-bold tw-text-4xl">▴</span>
+                    </div>
+                </div>
+                <div class="accordion-content">
+                    <p class="accordion-description tw-text-xl">
+                        <strong class="tw-text-2xl">Consulting for Small Businesses</strong>
+                        <br><br>
+                        Our small business advisory service helps entrepreneurs establish their business, from choosing the right structure to financial planning. We focus on creating a solid foundation for long-term growth and success.
+                        <br><br>
+                        <strong class="tw-text-2xl">Immigration and Finance Consulting</strong>
+                        <br><br>
+                        We support immigrants in the U.S. in understanding their tax implications and preparing financially. With clear, personalized guidance, we help them navigate the complexities of the U.S. financial system.
+                    </p>
+                    <div class="accordion-image">
+                        <img loading="lazy" src="assets/images/home/Accounting-1.jpg" alt="Service Image">
+                        <div class="accordion-features">
+                            <strong class="tw-text-xl tw-font-bold">Features of the Service Offered</strong>
+                            <div class="additional-features tw-text-lg">
+                                <ul>
+                                    <li>✔ Support at every stage</li>
+                                    <li>✔ Strategies for growth</li>
+                                    <li>✔ Full compliance with laws</li>
+                                </ul>
+                                <ul>
+                                    <li>✔ Goal-aligned planning</li>
+                                    <li>✔ Simplified licenses</li>
+                                    <li>✔ Consulting to protect your business</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion Card 4 -->
+            <div class="accordion-card" onclick="toggleAccordion(this)">
+                <div class="accordion-header">
+                    <h3 class="accordion-title tw-font-bold tw-text-3xl">Payroll and Specialized Consulting</h3>
+                    <div class="accordion-icon">
+                        <span class="toggle-icon tw-font-bold tw-text-4xl">▴</span>
+                    </div>
+                </div>
+                <div class="accordion-content">
+                    <p class="accordion-description tw-text-xl">
+                        <strong class="tw-text-2xl">Payroll Services</strong>
+                        <br><br>
+                        Our payroll service includes comprehensive management of payments and tax deductions, ensuring compliance with all labor laws. We handle payroll so employers can focus on the success of their business.
+                        <br><br>
+                        <strong class="tw-text-2xl">Financial Education</strong>
+                        <br><br>
+                        We offer workshops and training in Spanish on financial education topics, providing our clients with the tools for healthy financial management. We cover everything from saving and investing to retirement planning.
+                    </p>
+                    <div class="accordion-image">
+                        <img loading="lazy" src="assets/images/home/Accounting-6.jpg" alt="Service Image">
+                        <div class="accordion-features">
+                            <strong class="tw-text-xl tw-font-bold">Features of the Service Offered</strong>
+                            <div class="additional-features tw-text-lg">
+                                <ul>
+                                    <li>✔ Error-free payroll management</li>
+                                    <li>✔ Guaranteed job performance</li>
+                                    <li>✔ Optimized payments</li>
+                                </ul>
+                                <ul>
+                                    <li>✔ Audit support</li>
+                                    <li>✔ Consulting for complex cases</li>
+                                    <li>✔ Financial education workshops</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion Card 5 -->
+            <div class="accordion-card" onclick="toggleAccordion(this)">
+                <div class="accordion-header">
+                    <h3 class="accordion-title tw-font-bold tw-text-3xl">Certified Notary</h3>
+                    <div class="accordion-icon">
+                        <span class="toggle-icon tw-font-bold tw-text-4xl">▴</span>
+                    </div>
+                </div>
+                <div class="accordion-content">
+                    <p class="accordion-description tw-text-xl">
+                        <strong class="tw-text-2xl">Authentication and Certification of Documents</strong>
+                        <br><br>
+                        We offer certified notary services to guarantee the authenticity and legality of your documents.
+                        From contracts and affidavits to powers of attorney, we ensure your documents meet all necessary legal requirements.
+                        <br><br>
+                        <strong class="tw-text-2xl">Personalized Notary Advice</strong>
+                        <br><br>
+                        We provide expert advice to facilitate complex notarial processes. Our team guides you step by step, guaranteeing efficient service tailored to your specific needs.
+                    </p>
+                    <div class="accordion-image">
+                        <img loading="lazy" src="assets/images/home/Accounting-2.jpg" alt="Service Image">
+                        <div class="accordion-features">
+                            <strong class="tw-text-xl tw-font-bold">Features of the Service Offered</strong>
+                            <div class="additional-features tw-text-lg">
+                                <ul>
+                                    <li>✔ Fast and reliable certification</li>
+                                    <li>✔ Authentication of legal documents</li>
+                                    <li>✔ Expert advice</li>
+                                </ul>
+                                <ul>
+                                    <li>✔ Compliance with regulations</li>
+                                    <li>✔ Personalized attention</li>
+                                    <li>✔ Confidentiality guaranteed</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </section>
+
+    <section class="tw-w-full tw-flex 
+tw-place-content-center 
+tw-px-[10%]
+tw-p-[5%]
+tw-gap-[10%]
+tw-place-items-center
+max-md:tw-flex-col
+tw-overflow-hidden
+cta-section
+">
+        <div class="tw-flex tw-flex-col tw-place-items-center tw-gap-4">
+            <h3 class="tw-text-4xl tw-text-black tw-font-bold max-md:tw-text-3xl">Simplify your finances and reach new goals! Trust our accounting experts to take your financial peace of mind to the next level.</h3>
+            <a class="btn tw-mt-4 tw-rounded-xl hover:tw-scale-[1.05] tw-duration-[0.3s]" href="contact-us.html">
+                Start Now!
+            </a>
+        </div>
+    </section>
+
+
+    </div>
+    <footer class="tw-w-full tw-p-[5%] tw-px-[3%] tw-mt-auto tw-border-t tw-border-gray-300 tw-bg-gray-100">
+        <div class="tw-flex tw-place-content-around tw-gap-10 tw-flex-wrap max-md:tw-flex-col">
+            <!-- Left Section: Logo and Contact Information -->
+            <div class="tw-flex tw-gap-10 tw-items-start max-md:tw-flex-col">
+                <img src="assets/logos/cp&a-logo.png" alt="logo"
+                    class="tw-max-h-[150px] max-md:tw-max-w-[120px] tw-flex-col">
+                <div class="tw-flex tw-flex-col tw-text-black tw-gap-4">
+                    <p class="tw-text-lg tw-font-bold">Contact Info:</p>
+                    <p>+1 (314) 481-9220</p>
+                    <p>cpandacct@gmail.com</p>
+                    <p>11520 Saint Charles Rock Rd. Suite 201</p>
+                    <p>Bridgeton, MO 63044</p>
+                </div>
+            </div>
+
+            <!-- Center Section: Navigation Links -->
+            <div class="tw-flex tw-flex-col tw-gap-4 tw-text-lg tw-text-black">
+                <h2 class="tw-text-lg tw-font-bold">Links</h2>
+                <div class="tw-flex tw-flex-col tw-gap-3">
+                    <a href="/" class="footer-link">home</a>
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="services.html" class="footer-link">Services</a>
+                    <a href="blogs.html" class="footer-link">Blogs</a>
+                </div>
+            </div>
+
+            <!-- Right Section: Social Icons -->
+            <div class="tw-flex tw-flex-col tw-gap-4 tw-text-black">
+                <p class="tw-font-bold tw-text-lg tw-text-center">Follow us</p>
+                <div class="tw-flex tw-gap-4 tw-text-2xl social-media">
+                    <a href="https://facebook.com/" aria-label="Facebook" class="tw-text-black tw-hover:text-gray-600">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com/pauls_freeman" aria-label="Twitter"
+                        class="tw-text-black tw-hover:text-gray-600">
+                        <i class="bi bi-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/cpandaccounting/" aria-label="Instagram"
+                        class="tw-text-black tw-hover:text-gray-600">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="https://linkedin.com/" aria-label="LinkedIn" class="tw-text-black tw-hover:text-gray-600">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="https://wa.me/13144819220" aria-label="WhatsApp"
+                        class="tw-text-black tw-hover:text-gray-600">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Section: Copyright and Footer Link -->
+        <div
+            class="tw-mt-4 tw-border-t tw-border-gray-300 tw-pt-4 tw-text-sm tw-text-gray-600 tw-flex tw-justify-center tw-items-center tw-place-content-around">
+            <p>© 2024 CP&A. All rights reserved.</p>
+            <a href="https://www.dunosis.com" class="tw-underline">Made by <strong>Dunosis</strong></a>
+        </div>
+
+    </footer>
+
+    <!-- Start of OpenWidget (www.openwidget.com) code -->
+    <script>
+        window.__ow = window.__ow || {};
+        window.__ow.organizationId = "84ac1e16-8226-4ccb-a269-e366e05c19d4";
+        window.__ow.integration_name = "manual_settings";
+        window.__ow.product_name = "openwidget";
+        ; (function (n, t, c) { function i(n) { return e._h ? e._h.apply(null, n) : e._q.push(n) } var e = { _q: [], _h: null, _v: "2.0", on: function () { i(["on", c.call(arguments)]) }, once: function () { i(["once", c.call(arguments)]) }, off: function () { i(["off", c.call(arguments)]) }, get: function () { if (!e._h) throw new Error("[OpenWidget] You can't use getters before load."); return i(["get", c.call(arguments)]) }, call: function () { i(["call", c.call(arguments)]) }, init: function () { var n = t.createElement("script"); n.async = !0, n.type = "text/javascript", n.src = "https://cdn.openwidget.com/openwidget.js", t.head.appendChild(n) } }; !n.__ow.asyncInit && e.init(), n.OpenWidget = n.OpenWidget || e }(window, document, [].slice))
+    </script>
+    <noscript>You need to <a href="https://www.openwidget.com/enable-javascript" rel="noopener nofollow">enable
+            JavaScript</a> to use the communication tool powered by <a href="https://www.openwidget.com/"
+            rel="noopener nofollow" target="_blank">OpenWidget</a></noscript>
+    <!-- End of OpenWidget code -->
+
+</body>
+
+<script>
+    // Timezone settings
+    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone; // e.g. "America/New_York"
+    document.cookie = "user_timezone=" + timezone;
+</script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+    integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/browser-image-compression@2.0.1/dist/browser-image-compression.js"></script>
+
+
+<script src="js/utils/elements.js"></script>
+<script src="js/utils/common.js"></script>
+<script src="js/utils/images.js"></script>
+<script src="js/utils/constants.js"></script>
+
+<script src="js/base.js"></script>
+<script src="js/home.js"></script>
+
+</html>

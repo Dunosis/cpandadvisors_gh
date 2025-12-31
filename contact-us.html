@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="CP & A is an accounting firm in St. Louis specializing in personalized tax and accounting services for the Latino community. Helping businesses and individuals manage their finances with confidence.">
+    <meta name="keywords" content="CP & A, accounting, tax, Latino, St. Louis, Missouri">
+    <title>CP & Advisors - Conctac Us</title>
+
+    <link rel="shortcut icon" href="assets/logos/cpanda-full.ico" type="image/png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="CP & Advisors Project" />
+    <meta property="og:description"
+        content="CP & A is an accounting firm in St. Louis specializing in personalized tax and accounting services for the Latino community. Helping businesses and individuals manage their finances with confidence." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="assets/images/home/hiking4.jpg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:title" content="CP & Advisors Project">
+    <meta name="twitter:description"
+        content="CP & A is an accounting firm in St. Louis specializing in personalized tax and accounting services for the Latino community. Helping businesses and individuals manage their finances with confidence.">
+    <meta name="twitter:image" content="assets/images/home/hiking4.jpg">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+        integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={% settings_value " ANALYTICS_TAG_ID" %}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', '{% settings_value "ANALYTICS_TAG_ID" %}');
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body class="tw-min-h-[100vh] tw-w-full tw-bg-[#ffffff] tw-flex tw-flex-col">
+
+    <div id="toast"
+        class="tw-p-2 tw-px-4 tw-bg-black tw-h-max tw-z-[5000] tw-fixed tw-top-[5%] tw-left-[50%] tw-translate-x-[-50%]  tw-place-items-center tw-hidden tw-rounded-md tw-border-0 tw-text-white"
+        role="alert">
+        <div class="tw-flex tw-gap-1">
+            <div class="toast-body" id="toast-body">
+
+            </div>
+            <button type="button" class="bi bi-x tw-text-lg" aria-label="Close"></button>
+        </div>
+    </div>
+
+    <header
+        class="tw-flex tw-w-full tw-z-20 tw-h-[60px] lg:tw-justify-around tw-absolute tw-top-0 tw-px-[10%] max-lg:tw-mr-auto tw-text-black ">
+
+        <a class="tw-max-w-[150px] tw-h-[50px] tw-p-[4px]" href="/">
+            <img src="assets/logos/cp&a-logo.png" alt="logo" class="tw-w-full tw-h-full tw-object-contain">
+
+        </a>
+        <div class="collapsable-header animated-collapse max-lg:tw-shadow-md" id="collapsed-header-items">
+            <div
+                class="tw-w-max tw-text-base tw-flex tw-gap-5 tw-h-full lg:tw-mx-auto lg:tw-place-items-center max-lg:tw-place-items-end max-lg:tw-flex-col max-lg:tw-mt-[50px] max-lg:tw-gap-5 tw-text-black">
+
+                <a class="header-links" href="about.html">
+                    About
+                </a>
+                <a class="header-links" href="services.html">
+                    Services
+                </a>
+                <a class="header-links" href="blogs.html" rel="noreferrer">
+                    Blogs
+                </a>
+                <a class="header-links" href="contact-us.html" rel="noreferrer">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+        <button class="tw-absolute tw-text-black tw-z-50 tw-right-3 tw-top-3 tw-text-3xl  bi bi-list lg:tw-hidden"
+            onclick="toggleHeader()" aria-label="menu" id="collapse-btn">
+            <!-- <i class="bi bi-list"></i> -->
+        </button>
+    </header>
+
+    <div class="tw-w-full tw-h-full tw-mt-[50px]">
+
+
+        <section class="tw-w-full tw-flex 
+        tw-flex-col
+        tw-place-content-center 
+        max-md:tw-px-[10%]
+        tw-mt-2
+        tw-p-4
+        tw-gap-5
+        tw-place-items-center
+        max-lg:tw-px-0
+        tw-overflow-hidden
+        ">
+
+            <div class="tw-max-w-750px tw-flex tw-flex-col tw-justify-center tw-items-center tw-gap-5 
+        tw-p-5 max-sm:tw-px-4-1 form-container">
+                <p
+                    class="tw-text-3xl max-md:tw-text-xl primary-text-color tw-font-semibold tw-p-4 tw-max-w-650px tw-text-center">
+                    Please fill out this form and someone from our team will contact you as soon as possible. Thank you!
+                </p>
+                <form method="post" action="contact-us.html" onsubmit="return onSubmit(event)"
+                    class="tw-flex tw-flex-col tw-gap-[5%] tw-h-full tw-mt-[5%] tw-p-5 contact-form">
+                    {% if errors %}
+                    <div class="error-container tw-m-2">{{ errors }}</div>
+                    {% endif %} {% csrf_token %}
+
+                    <div class="tw-flex tw-flex-col tw-gap-2">
+                        <h2 class="tw-text-5xl max-md:tw-text-xl primary-text-color tw-font-bold tw-mb-[5%]">
+                            Contact us now!
+                        </h2>
+                        <h3 class="tw-text-3xl max-md:tw-text-3xl tw-font-semibold">
+                            We'll be waiting for you.
+                        </h3>
+                    </div>
+                    <div
+                        class="tw-max-w-[550px] tw-min-w-[450px] max-md:tw-min-w-[300px] tw-mt-4 tw-flex tw-flex-col tw-gap-3">
+                        <div class="tw-flex tw-flex-col tw-gap-4">
+                            <div class="tw-flex tw-flex-col tw-gap-1">
+                                <div class="tw-text-gray-500">Name</div>
+                                <input type="text" class="input" name="name" maxlength="30" required
+                                    value="{{ data.name }}" placeholder="Claudia Principal" />
+                            </div>
+                            <div class="tw-flex tw-flex-col tw-gap-1">
+                                <div class="tw-text-gray-500">Phone</div>
+                                <div class="tw-flex tw-gap-1 tw-w-full tw-place-content-center">
+                                    <select name="country-codes" id="country-codes"
+                                        class="input tw-min-w-[10%]"></select>
+                                    <input type="text" class="input tw-w-[70%]" maxlength="15" required
+                                        value="{{ data.phone|phone_number }}" name="phone-number"
+                                        placeholder="123 456 7890" />
+                                    <input type="hidden" value="{{ data.phone }}" name="phone" value="" />
+                                </div>
+                            </div>
+                            <div class="tw-flex tw-flex-col tw-gap-1">
+                                <div class="tw-text-gray-500">Email</div>
+                                <input type="email" class="input" required name="email" maxlength="250"
+                                    placeholder="ejemplo@email.com" value="{{ data.email }}" id="email" />
+                            </div>
+
+                            <div class="tw-flex tw-flex-col tw-w-full tw-gap-2">
+                                <div class="tw-text-gray-500">Message</div>
+                                <textarea class="input tw-resize-y tw-w-full tw-max-h-[250px] tw-min-h-[40px]"
+                                    name="description" maxlength="1200" required value="{{ data.description }}"
+                                    placeholder="Estoy interesado en sus servicios...">{{ data.description }}</textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit"
+                            class="btn tw-transition-transform hover:tw-translate-x-2 tw-duration-[0.3s] tw-mt-5 tw-mx-auto">
+                            <span>Submit</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+
+
+    </div>
+    <footer class="tw-w-full tw-p-[5%] tw-px-[3%] tw-mt-auto tw-border-t tw-border-gray-300 tw-bg-gray-100">
+        <div class="tw-flex tw-place-content-around tw-gap-10 tw-flex-wrap max-md:tw-flex-col">
+            <!-- Left Section: Logo and Contact Information -->
+            <div class="tw-flex tw-gap-10 tw-items-start max-md:tw-flex-col">
+                <img src="assets/logos/cp&a-logo.png" alt="logo"
+                    class="tw-max-h-[150px] max-md:tw-max-w-[120px] tw-flex-col">
+                <div class="tw-flex tw-flex-col tw-text-black tw-gap-4">
+                    <p class="tw-text-lg tw-font-bold">Contact Info:</p>
+                    <p>+1 (314) 481-9220</p>
+                    <p>cpandacct@gmail.com</p>
+                    <p>11520 Saint Charles Rock Rd. Suite 201</p>
+                    <p>Bridgeton, MO 63044</p>
+                </div>
+            </div>
+
+            <!-- Center Section: Navigation Links -->
+            <div class="tw-flex tw-flex-col tw-gap-4 tw-text-lg tw-text-black">
+                <h2 class="tw-text-lg tw-font-bold">Links</h2>
+                <div class="tw-flex tw-flex-col tw-gap-3">
+                    <a href="/" class="footer-link">home</a>
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="services.html" class="footer-link">Services</a>
+                    <a href="blogs.html" class="footer-link">Blogs</a>
+                </div>
+            </div>
+
+            <!-- Right Section: Social Icons -->
+            <div class="tw-flex tw-flex-col tw-gap-4 tw-text-black">
+                <p class="tw-font-bold tw-text-lg tw-text-center">Follow us</p>
+                <div class="tw-flex tw-gap-4 tw-text-2xl social-media">
+                    <a href="https://facebook.com/" aria-label="Facebook" class="tw-text-black tw-hover:text-gray-600">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com/pauls_freeman" aria-label="Twitter"
+                        class="tw-text-black tw-hover:text-gray-600">
+                        <i class="bi bi-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/cpandaccounting/" aria-label="Instagram"
+                        class="tw-text-black tw-hover:text-gray-600">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="https://linkedin.com/" aria-label="LinkedIn" class="tw-text-black tw-hover:text-gray-600">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="https://wa.me/13144819220" aria-label="WhatsApp"
+                        class="tw-text-black tw-hover:text-gray-600">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Section: Copyright and Footer Link -->
+        <div
+            class="tw-mt-4 tw-border-t tw-border-gray-300 tw-pt-4 tw-text-sm tw-text-gray-600 tw-flex tw-justify-center tw-items-center tw-place-content-around">
+            <p>© 2024 CP&A. All rights reserved.</p>
+            <a href="https://www.dunosis.com" class="tw-underline">Made by <strong>Dunosis</strong></a>
+        </div>
+
+    </footer>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+    integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
+    integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="js/inquiry/inquiry.js"></script>
